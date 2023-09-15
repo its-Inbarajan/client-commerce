@@ -1,17 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import "react-toastify/dist/ReactToastify.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { ToastContainer } from "react-toastify";
+import { Provider } from "react-redux";
+// import { store } from "./Store";
+import { Tooltip } from "react-tooltip";
+import { createStore } from "redux";
+// import { AuthenticateContext } from "./Context/AuthenticateContext";
+import rootReducer from "./hooks/Reducer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const store = createStore(rootReducer);
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <AuthenticateContext> */}
+    <Provider store={store}>
+      <App />
+      <Tooltip id="my-tooltip" />
+      <ToastContainer position="top-center" reverseOrder={false} />
+    </Provider>
+    {/* </AuthenticateContext> */}
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -1,7 +1,8 @@
-.App {
-  text-align: center;
-}
-
+ /* .App {
+  background-color: 
+  #1b1b1b;
+} */
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -17,16 +18,14 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +34,71 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.nav-item{
+  color: #0000;
+  font-size: 19px;
+  text-decoration: none ;
+}
+
+@media screen and (max-width: 760px) {
+  .App-header{
+    background-color: hotpink;
+  }
+} */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden ;
+  /* overflow-y: hidden ; */
+  /* background-color: 
+  #1d1f20; */
+}
+
+
+.card{
+  padding: 10px;
+  margin: 10px;
+}
+
+a{
+  text-decoration: none !important;
+  font-size: 19px;
+  color: #7c7979 !important;
+}
+.space{
+  flex: 1 1 auto;
+}
+
+.App-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+
+}
+
+/* .container{
+  background-color: black;
+  
+} */
+
+
+span{
+  margin: 5px;
+  padding: 5px;
+}
+
+/* @media screen (max-width : 740px) {
+  
+} */
+
+.images{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  
 }
